@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<!-- Mirrored from logisticsportal.iadb.org/data/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 May 2015 06:15:03 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="../sites/all/themes/kmpfl/favicon.ico" type="image/vnd.microsoft.icon">
+    <title>Datos y estadísticas | Observatorio Regional de Logística</title>
+    <script language="javascript" src="http://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js"></script>
+    <link rel="stylesheet" href="http://logisticsportal.iadb.org/data/css/home_styles.css">
+</head>
+
+<body>
+    <div>
+        <div id="iadb-header">
+            <div class="container_10 clearfix">
+                <div class="grid_6 top">
+                    <a href="../../iadb.org/index.html" title="Inter-American Development Bank" rel="home" id="logo" target="_blank">
+                        <img src="http://logisticsportal.iadb.org/data/img/logo.png" alt="Inter-American Development Bank">
+                    </a>
+                </div>
+                <div class="grid_4 top">
+                    <div id="header-items" style="margin: 0;">
+                        <ul class="links inline">
+                            <li>
+                                <a href="http://logisticsportal.iadb.org/data/index_en.htm">English</a>
+                            </li>
+                            <li>
+                                <a href="http://logisticsportal.iadb.org/data/index.htm" class="active">Español</a>
+                            </li>
+                            <li>
+                                <a href="../user/login.html">Inicie sesión</a>
+                            </li>
+                            <li class="register last">
+                                <a href="../user/register.html">Regístrese</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color:white;">
+        <iframe src="http://logisticsportal.iadb.org/pentaho/content/pentaho-cdf/RenderXCDF?solution=KMPFL&amp;path=&amp;action=homepage_es.xcdf&amp;template=mantle&amp;userid=kmpfl&amp;password=kmpfl&amp;locale=es" id="iframeDashboards" frameborder="0"></iframe>
+    </div>
+    <script language="javascript">
+        var recalculateWindowSize = function() {
+            $("#iframeDashboards", parent.document.body).height($(window).height() - $("#iadb-header").height() - 5);
+            $("#iframeDashboards", parent.document.body).width($(document.body).width() );
+        };
+        $(window).ready(recalculateWindowSize);
+        $(window).resize(recalculateWindowSize);
+    </script>
+</body>
+
+
+<!-- Mirrored from logisticsportal.iadb.org/data/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 May 2015 06:15:03 GMT -->
+</html>
