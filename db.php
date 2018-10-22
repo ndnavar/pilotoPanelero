@@ -24,7 +24,7 @@ class db{
 	 */
 	function __construct(){
 		//$this->db_connect('localhost','id1722893_root','DB_CII_2017','id1722893_asistencia');
-		$this->db_connect('localhost','root','maderable_852','CIIO2018');
+		$this->db_connect('localhost','panelero','P4n3l4','CIIO2018');
 	}
 
 
