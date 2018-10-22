@@ -102,6 +102,7 @@ if (isset($_SESSION['k_id'])) {
 		echo '<a href="cursos.php"><h2>Creación de Lotes</h2></a>';
 		echo '<a href="reportes.php"><h2>Reportes</h2></a>';
 		echo '<a href="registro.php"><h2>Registro de producción</h2></a>';
+		echo '<a href="control.php"><h2>Punto de Control</h2></a>';
 		if ($del){
 		$db->del_msg($del);	
 		}

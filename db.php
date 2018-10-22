@@ -205,6 +205,21 @@ return '<p align="right" style="font-size: 1.5em;color:#D3DE23">Total registrado
 		
 		return [TRUE,$msg];
 	}
+	function add_control_point($code,$lat,$lon,$register_id){
+		$query='SELECT username FROM Usuarios where id='.$register_id;
+		$pointName=$this->db->query($query)->fetch_object()->username;
+		#$pointName=$this->db->query('SELECT username FROM Usuarios where id='.$register_id);
+		#$pointName = $pointName->fetch_object();
+		$query="INSERT into Ubicacion VALUES ('".$code."',".$lat.",".$lon.",'".$pointName."')";
+		$result =  $this->db->query($query);
+		if ($result){
+			$msg=$this->track_qr($code);
+			return [TRUE,$msg[1]];
+		}		
+		else
+		return [FALSE,$query];
+		
+	}
 	function registrar($doc,$id_curso,$prod_ca,$prod_pa,$id_registrador,$lat,$lon){
 		$title = $this->db->real_escape_string($doc);
 		$existe=$this->db->query('SELECT id FROM Usuarios where id="'.$doc.'"');
