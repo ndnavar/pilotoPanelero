@@ -2,7 +2,7 @@
 require('common.php');
 session_start();
 
-
+//Ya iniciado el progrma se debe iniciar sesión, de esta parte se hace el llamadao de usuario
 if (isset($_SESSION['k_username'])) {
 	$r=$db->es_registrador($_SESSION['k_id']);
 	if (!$r){
@@ -14,9 +14,9 @@ if (isset($_SESSION['k_username'])) {
 	echo '<SCRIPT LANGUAGE="javascript">
 			location.href = "login.php?id='.$id.'";
 			</SCRIPT>';
-}
+}l
 
-
+//Si no se encuentra registrado manda la opcion de registrarse
 
 if($_POST && !empty($_POST['fname'])){
 	
@@ -26,7 +26,7 @@ if($_POST && !empty($_POST['fname'])){
 	$result = $db->registrar(strip_tags($id),$id_curso,$_SESSION['k_id']);
 }
 $fname=md5(time());
-
+//En esta aprte esta todo lo que es de estilo de texto, todo lo realacionado con el diseño. 
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,6 +42,7 @@ $fname=md5(time());
 	<meta charset="UTF-8">
 	<title></title>
 <script>
+//En esta sección se analiza todo l	
     $(document).ready(function() {
     // Variable to hold request
 
